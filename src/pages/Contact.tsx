@@ -91,17 +91,15 @@ export default function Contact() {
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-deep-navy to-navy" />
 
         <div className="relative container-custom">
-          <div className="badge-azure mb-6 bg-azure/20 text-azure">
-            Contact
-          </div>
+          <div className="badge-azure mb-6 bg-azure/20 text-azure">Contact</div>
 
           <h1 className="text-white mb-4 max-w-3xl">
             Let's talk about your application.
           </h1>
 
           <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
-            Tell us what you need to build, integrate, modernise, or
-            deploy. We will respond within one business day.
+            Tell us what you need to build, integrate, modernise, or deploy. We
+            will respond within one business day.
           </p>
         </div>
       </section>
@@ -110,13 +108,9 @@ export default function Contact() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-
             {/* Form */}
             <div className="lg:col-span-2">
-              <form
-                onSubmit={handleSubmit}
-                className="space-y-6"
-              >
+              <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name + Organisation */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
@@ -205,36 +199,25 @@ export default function Contact() {
                     className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-tech-blue focus:ring-2 focus:ring-tech-blue/20 outline-none transition-all bg-white"
                   >
                     <option value="">Select an option</option>
+                    <option value="staff-portal">Staff portal</option>
+                    <option value="workflow">Workflow digitisation</option>
+                    <option value="customer-portal">Customer portal</option>
                     <option value="custom-app">
-                      Custom application development
-                    </option>
-                    <option value="web-app">
-                      Enterprise web application
-                    </option>
-                    <option value="api">
-                      API development
+                      Custom business application
                     </option>
                     <option value="integration">
-                      Systems integration
+                      Systems integration / API
                     </option>
                     <option value="modernisation">
                       Application modernisation
                     </option>
-                    <option value="cloud">
-                      Cloud deployment
-                    </option>
-                    <option value="devops">
-                      DevOps & CI/CD
-                    </option>
-                    <option value="discovery">
-                      Discovery engagement
-                    </option>
+                    <option value="cloud">Cloud deployment</option>
+                    <option value="dashboard">Reporting / dashboard</option>
+                    <option value="discovery">Discovery engagement</option>
                     <option value="partnership">
                       Partnership / subcontracting
                     </option>
-                    <option value="other">
-                      Other
-                    </option>
+                    <option value="other">Other</option>
                   </select>
                 </div>
 
@@ -252,29 +235,19 @@ export default function Contact() {
                     name="budget"
                     className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-tech-blue focus:ring-2 focus:ring-tech-blue/20 outline-none transition-all bg-white"
                   >
-                    <option value="">
-                      Prefer not to say
-                    </option>
+                    <option value="">Prefer not to say</option>
 
                     <option value="discovery">
                       Discovery only (R15,000 – R75,000)
                     </option>
 
-                    <option value="under-150">
-                      Under R150,000
-                    </option>
+                    <option value="under-150">Under R150,000</option>
 
-                    <option value="150-300">
-                      R150,000 – R300,000
-                    </option>
+                    <option value="150-300">R150,000 – R300,000</option>
 
-                    <option value="300-500">
-                      R300,000 – R500,000
-                    </option>
+                    <option value="300-500">R300,000 – R500,000</option>
 
-                    <option value="above-500">
-                      Above R500,000
-                    </option>
+                    <option value="above-500">Above R500,000</option>
                   </select>
                 </div>
 
@@ -323,8 +296,8 @@ export default function Contact() {
                 </button>
 
                 <p className="text-sm text-slate-gray">
-                  We respond within one business day. Your information
-                  is kept confidential.
+                  We respond within one business day. Your information is kept
+                  confidential.
                 </p>
               </form>
             </div>
@@ -332,14 +305,10 @@ export default function Contact() {
             {/* Contact Details */}
             <div className="lg:col-span-1">
               <div className="bg-slate-50 p-8 rounded-xl space-y-6">
-
                 <div>
-                  <h4 className="mb-4">
-                    Contact details
-                  </h4>
+                  <h4 className="mb-4">Contact details</h4>
 
                   <ul className="space-y-4 text-sm">
-
                     <li className="flex gap-3 items-start">
                       <Mail
                         className="text-tech-blue shrink-0 mt-0.5"
@@ -374,18 +343,13 @@ export default function Contact() {
                         size={18}
                       />
 
-                      <span className="text-slate-gray">
-                        Midrand, Gauteng
-                      </span>
+                      <span className="text-slate-gray">Midrand, Gauteng</span>
                     </li>
-
                   </ul>
                 </div>
 
                 <div className="pt-6 border-t border-slate-200">
-                  <h4 className="mb-3 text-sm">
-                    Response time
-                  </h4>
+                  <h4 className="mb-3 text-sm">Response time</h4>
 
                   <p className="text-slate-gray text-sm">
                     We respond to all enquiries within one business day.
@@ -393,21 +357,16 @@ export default function Contact() {
                 </div>
 
                 <div className="pt-6 border-t border-slate-200">
-                  <h4 className="mb-3 text-sm">
-                    Partnership enquiries
-                  </h4>
+                  <h4 className="mb-3 text-sm">Partnership enquiries</h4>
 
                   <p className="text-slate-gray text-sm mb-4">
-                    If you are an ICT company or system integrator
-                    looking for additional .NET or Azure engineering
-                    capacity, use the form and select "Partnership /
-                    subcontracting."
+                    If you are an ICT company or system integrator looking for
+                    additional .NET or Azure engineering capacity, use the form
+                    and select "Partnership / subcontracting."
                   </p>
                 </div>
-
               </div>
             </div>
-
           </div>
         </div>
       </section>

@@ -11,6 +11,7 @@ export default function Header() {
     { to: "/services", label: "Services" },
     { to: "/technology", label: "Technology" },
     { to: "/industries", label: "Industries" },
+       { to: '/work', label: 'Work' },
     { to: "/about", label: "About" },
     { to: "/contact", label: "Contact" },
   ];

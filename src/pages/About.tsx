@@ -2,6 +2,22 @@ import { Link } from "react-router-dom";
 import { Check, ArrowRight } from "lucide-react";
 
 export default function About() {
+  const team = [
+    {
+      role: "Founder & Principal Consultant",
+      focus: "Sales, architecture, client relationships, delivery oversight",
+    },
+    {
+      role: "Senior Application Developer",
+      focus: ".NET/C# backend, API development, database design",
+    },
+    {
+      role: "Senior Application Developer",
+      focus: "React/Angular frontend, integration, testing",
+    },
+    { role: "Contract Designer", focus: "UI/UX design, engaged per project" },
+  ];
+
   return (
     <>
       <section className="bg-navy text-white section-padding relative overflow-hidden">
@@ -9,12 +25,12 @@ export default function About() {
         <div className="relative container-custom">
           <div className="badge-azure mb-6 bg-azure/20 text-azure">About</div>
           <h1 className="text-white mb-4 max-w-3xl">
-            A specialised application engineering division.
+            A focused application engineering team.
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
             TR Application Development is a division of TR Software Development
-            Consulting (Pty) Ltd, focused on enterprise application development,
-            systems integration, and cloud deployment.
+            Consulting (Pty) Ltd. We design, build, and integrate practical
+            business applications.
           </p>
         </div>
       </section>
@@ -26,51 +42,39 @@ export default function About() {
               <h2 className="mb-6">Our positioning</h2>
               <div className="space-y-4 text-slate-gray leading-relaxed">
                 <p>
-                  TR Application Development was formerly positioned as "TR Web
-                  Development Consulting." It was renamed and repositioned to
-                  reflect its broader capability: enterprise application
-                  engineering, not just web development.
+                  We build the applications that run your business. Staff
+                  portals, customer portals, workflow systems, dashboards, APIs,
+                  and the integrations that connect them.
                 </p>
                 <p>
-                  The division maintains a Microsoft-focused engineering
-                  strategy while remaining capable of working with modern web
-                  technologies and integrating with heterogeneous client
-                  environments.
+                  Our primary technology ecosystem is Microsoft — .NET, Azure,
+                  SQL Server, and Azure DevOps — with modern React and Angular
+                  frontends.
                 </p>
                 <p>
-                  Strategic boundary: TR Application Development is
-                  intentionally not positioned as a managed-services or
-                  application-maintenance business. Those activities remain
-                  within the broader capabilities of TR Software Development
-                  Consulting (Pty) Ltd.
+                  TR Application Development is intentionally not positioned as
+                  a managed-services or maintenance provider. Those activities
+                  are handled by the parent company under a separate agreement.
+                  This keeps our focus clean: we build, integrate, and deploy.
                 </p>
               </div>
             </div>
 
             <div>
-              <h2 className="mb-6">What we are not</h2>
-              <p className="text-slate-gray mb-6 leading-relaxed">
-                To protect the division's positioning, the following should not
-                be its primary commercial identity:
-              </p>
-              <div className="space-y-2">
-                {[
-                  "Website design agency",
-                  "Generic freelance development",
-                  "MERN development agency",
-                  "MEAN development agency",
-                  "Mobile application company",
-                  "IT helpdesk",
-                  "General hardware supplier",
-                  "Managed-services provider",
-                  "Application maintenance company",
-                ].map((item) => (
+              <h2 className="mb-6">Our team</h2>
+              <div className="space-y-4">
+                {team.map((member, index) => (
                   <div
-                    key={item}
-                    className="flex gap-3 text-sm text-slate-gray"
+                    key={member.role}
+                    className="flex gap-4 items-start bg-slate-50 p-5 rounded-xl"
                   >
-                    <span className="text-red-400 flex-shrink-0 mt-0.5">✕</span>
-                    <span>{item}</span>
+                    <div className="w-8 h-8 rounded-lg bg-tech-blue text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
+                      {index + 1}
+                    </div>
+                    <div>
+                      <h4 className="mb-1 text-sm">{member.role}</h4>
+                      <p className="text-slate-gray text-sm">{member.focus}</p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -85,8 +89,8 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "Engineering quality",
-                desc: "Architecture, source control, automated testing, CI/CD, and documented delivery processes.",
+                title: "Practical delivery",
+                desc: "We build applications that solve real business problems, not theoretical architectures.",
               },
               {
                 title: "Full code ownership",
@@ -106,7 +110,7 @@ export default function About() {
               },
               {
                 title: "Compliance by design",
-                desc: "POPIA compliance with data processing agreements. B-BBEE EME status with sworn affidavit.",
+                desc: "POPIA compliance with data processing agreements. B-BBEE EME Level 4.",
               },
             ].map((value) => (
               <div
