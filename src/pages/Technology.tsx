@@ -130,7 +130,7 @@ export default function Technology() {
       icon: Plug,
       layer: "Integration",
       summary:
-        "Connecting your systems — even the ones that were never meant to talk.",
+        "Connecting your systems  even the ones that were never meant to talk.",
       items: [
         { name: "REST APIs", desc: "System-to-system communication" },
         {

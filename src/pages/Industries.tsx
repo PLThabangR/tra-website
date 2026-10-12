@@ -189,7 +189,7 @@ export default function Industries() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-8 rounded-xl border-2 border-tech-blue/30">
               <div className="text-sm font-semibold text-tech-blue uppercase tracking-wider mb-3">
-                Primary focus — Year 1
+                Primary focus  Year 1
               </div>
               <h3 className="mb-4">Mid-Market Businesses</h3>
               <p className="text-slate-gray mb-6 leading-relaxed">
@@ -219,7 +219,7 @@ export default function Industries() {
 
             <div className="bg-white p-8 rounded-xl border border-slate-200">
               <div className="text-sm font-semibold text-slate-gray uppercase tracking-wider mb-3">
-                Secondary focus — Year 2
+                Secondary focus  Year 2
               </div>
               <h3 className="mb-4">Enterprises & Government</h3>
               <p className="text-slate-gray mb-6 leading-relaxed">

@@ -6,7 +6,7 @@ export default function Work() {
     {
       icon: Car,
       title: "Motor Insurance App",
-      status: "Completed — Flagship Reference",
+      status: "Completed  Flagship Reference",
       description:
         "A full-stack motor insurance management application built end-to-end on .NET, React, TypeScript, SQL Server, and Azure.",
       outcomes: [

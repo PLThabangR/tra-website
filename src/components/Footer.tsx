@@ -115,7 +115,7 @@ export default function Footer() {
             (Pty) Ltd. All rights reserved.
           </p>
           <p className="text-xs">
-            TR Application Development Consulting — Enterprise Application
+            TR Application Development Consulting  Enterprise Application
             Engineering
           </p>
         </div>

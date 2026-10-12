@@ -214,7 +214,7 @@ export default function Home() {
             </h2>
             <p className="text-lg text-slate-gray leading-relaxed">
               Staff portals, customer portals, workflow systems, dashboards,
-              APIs, and the integrations that connect them.
+              APIs and the integrations that connect them.
             </p>
           </div>
 
@@ -270,8 +270,8 @@ export default function Home() {
           <div className="max-w-3xl mb-16">
             <h2 className="mb-4">Core services</h2>
             <p className="text-lg text-slate-gray leading-relaxed">
-              Full application delivery — from requirements and architecture
-              through development, integration, and cloud deployment.
+              Full application delivery  from requirements and architecture
+              through development, integration and cloud deployment.
             </p>
           </div>
 
@@ -328,11 +328,11 @@ export default function Home() {
 
         <div className="relative container-custom text-center">
           <h2 className="text-white mb-4">
-            Have an application to build, integrate, or modernise?
+            Have an application to build, integrate or modernise?
           </h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             We start with a discovery engagement. Requirements, architecture,
-            integration analysis, and a delivery roadmap  before any code is
+            integration analysis and a delivery roadmap  before any code is
             written.
           </p>
           <Link to="/contact" className="btn-primary">
