@@ -29,7 +29,7 @@ export default function About() {
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
             TR Application Development is a division of TR Software Development
-            Consulting (Pty) Ltd. We design, build, and integrate practical
+            Consulting (Pty) Ltd. We design, build and integrate practical
             business applications.
           </p>
         </div>
@@ -43,19 +43,19 @@ export default function About() {
               <div className="space-y-4 text-slate-gray leading-relaxed">
                 <p>
                   We build the applications that run your business. Staff
-                  portals, customer portals, workflow systems, dashboards, APIs,
+                  portals, customer portals, workflow systems, dashboards, APIs
                   and the integrations that connect them.
                 </p>
                 <p>
-                  Our primary technology ecosystem is Microsoft — .NET, Azure,
-                  SQL Server, and Azure DevOps — with modern React and Angular
+                  Our primary technology ecosystem is Microsoft .NET, Azure,
+                  SQL Server and Azure DevOps with modern React and Angular
                   frontends.
                 </p>
                 <p>
                   TR Application Development is intentionally not positioned as
                   a managed-services or maintenance provider. Those activities
                   are handled by the parent company under a separate agreement.
-                  This keeps our focus clean: we build, integrate, and deploy.
+                  This keeps our focus clean: we build, integrate and deploy.
                 </p>
               </div>
             </div>
@@ -139,7 +139,7 @@ export default function About() {
             Let's talk about your application.
           </h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Whether you need to build, integrate, modernise, or deploy — we
+            Whether you need to build, integrate, modernise or deploy we
             start with understanding.
           </p>
           <Link to="/contact" className="btn-primary">

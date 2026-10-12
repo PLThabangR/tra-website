@@ -201,7 +201,7 @@ export default function Services() {
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
             From requirements and architecture through development, integration,
-            and cloud deployment — we build the applications that run your
+            and cloud deployment we build the applications that run your
             business.
           </p>
         </div>
@@ -243,10 +243,10 @@ export default function Services() {
         <div className="container-custom">
           <h2 className="mb-4">Technologies we use</h2>
           <p className="text-lg text-slate-gray mb-12 max-w-3xl leading-relaxed">
-            Our primary ecosystem is Microsoft — .NET, Azure, SQL Server, and
-            Azure DevOps — with modern React and Angular frontends. We also
+            Our primary ecosystem is Microsoft .NET, Azure, SQL Server, and
+            Azure DevOps with modern React and Angular frontends. We also
             integrate with heterogeneous client environments including Java,
-            Oracle, PostgreSQL, SAP, Salesforce, and legacy systems.
+            Oracle, PostgreSQL, SAP, Salesforce and legacy systems.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {techStack.map((group) => (
@@ -321,7 +321,7 @@ export default function Services() {
           <h2 className="text-white mb-4">Not sure which service you need?</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             Start with a discovery engagement. We assess your requirements,
-            design the architecture, and give you a delivery roadmap — before
+            design the architecture, and give you a delivery roadmap before
             any code is written.
           </p>
           <Link to="/contact" className="btn-primary">

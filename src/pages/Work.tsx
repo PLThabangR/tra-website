@@ -171,7 +171,7 @@ export default function Work() {
           </h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             We can walk you through the Motor Insurance App architecture,
-            decisions, and outcomes. No sales pitch — just the technical story.
+            decisions, and outcomes. No sales pitch just the technical story.
           </p>
           <Link to="/contact" className="btn-primary">
             Request a Walkthrough

@@ -332,7 +332,7 @@ export default function Home() {
           </h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             We start with a discovery engagement. Requirements, architecture,
-            integration analysis, and a delivery roadmap — before any code is
+            integration analysis, and a delivery roadmap  before any code is
             written.
           </p>
           <Link to="/contact" className="btn-primary">

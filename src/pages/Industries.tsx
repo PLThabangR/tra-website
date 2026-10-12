@@ -141,7 +141,7 @@ export default function Industries() {
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
             We work with organisations that need modern, integrated, and
-            deployable applications — not just websites.
+            deployable applications not just websites.
           </p>
         </div>
       </section>
