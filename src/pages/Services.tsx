@@ -1,124 +1,272 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import {
+  Code2,
+  Globe,
+  Plug,
+  Layers,
+  Cloud,
+  GitBranch,
+  Server,
+  Database,
+  Network,
+  ArrowRight,
+  Check,
+} from "lucide-react";
 
-export default function Footer() {
+export default function Services() {
+  const services = [
+    {
+      icon: Code2,
+      title: "Custom Application Development",
+      description:
+        "Applications designed and developed based on specific organisational requirements.",
+      features: [
+        "Enterprise web applications",
+        "Business applications and internal systems",
+        "Customer-facing applications and portals",
+        "Workflow and self-service platforms",
+        "Reporting and data-driven applications",
+        "Line-of-business applications",
+      ],
+    },
+    {
+      icon: Globe,
+      title: "Enterprise Web Application Development",
+      description:
+        "Modern web applications using React or Angular with ASP.NET Core backend.",
+      features: [
+        "React + TypeScript frontends",
+        "Angular + TypeScript frontends",
+        "ASP.NET Core / C# backend",
+        "REST / Web API architecture",
+        "SQL Server or external API integration",
+        "Azure deployment",
+      ],
+    },
+    {
+      icon: Network,
+      title: "API Development",
+      description:
+        "REST APIs that connect applications and services across your enterprise.",
+      features: [
+        "ASP.NET Core Web APIs",
+        "Authentication and authorisation",
+        "OpenAPI / Swagger documentation",
+        "Third-party API integration",
+        "API gateways and versioning",
+        "API security",
+      ],
+    },
+    {
+      icon: Plug,
+      title: "Systems Integration",
+      description:
+        "Enable different business systems to communicate and exchange information.",
+      features: [
+        "REST API integration",
+        "CRM, ERP, and HR system integration",
+        "Payment and government-system integration",
+        "Database and cloud-service integration",
+        "Legacy-system integration",
+        "Azure API Management and Service Bus",
+      ],
+    },
+    {
+      icon: Layers,
+      title: "Application Modernisation",
+      description: "Transition legacy applications to modern architectures.",
+      features: [
+        "Legacy application assessment",
+        "API enablement",
+        "Monolith modernisation",
+        "Database modernisation",
+        "Cloud migration and containerisation",
+        "Architecture refactoring and technical-debt reduction",
+      ],
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Application Deployment",
+      description:
+        "Deploy applications to Microsoft Azure with repeatable processes.",
+      features: [
+        "Azure App Service deployment",
+        "Azure SQL, Storage, and Functions",
+        "Azure API Management",
+        "Application and environment configuration",
+        "Networking integration",
+        "Multi-environment deployment",
+      ],
+    },
+    {
+      icon: GitBranch,
+      title: "DevOps & CI/CD",
+      description: "Automated build, test, and deployment pipelines.",
+      features: [
+        "Azure DevOps implementation",
+        "GitHub Actions",
+        "Automated builds and testing",
+        "Deployment automation",
+        "Environment and release management",
+        "Docker containerisation",
+      ],
+    },
+    {
+      icon: Server,
+      title: "Infrastructure as Code",
+      description:
+        "Repeatable, version-controlled Azure infrastructure using Terraform.",
+      features: [
+        "Resource Group provisioning",
+        "App Service, Azure SQL, Storage",
+        "Networking and monitoring",
+        "Version-controlled infrastructure",
+        "Reproducible environments",
+        "Consistent deployment",
+      ],
+    },
+    {
+      icon: Database,
+      title: "Database & Data-Driven Applications",
+      description: "Applications built on reliable relational data platforms.",
+      features: [
+        "Database and data modelling",
+        "Entity Framework Core implementation",
+        "Query optimisation",
+        "Database integration",
+        "Data migration",
+        "Application/database architecture",
+      ],
+    },
+    {
+      icon: Code2,
+      title: "Technical Architecture",
+      description:
+        "Architecture services delivered as part of application engagements.",
+      features: [
+        "Application, API, and database architecture",
+        "Cloud, integration, and deployment architecture",
+        "Security and container architecture",
+        "Clean Architecture and Layered Architecture",
+        "Domain-Driven Design and CQRS",
+        "Modular monoliths and microservices",
+      ],
+    },
+  ];
+
   return (
-    <footer className="bg-deep-navy text-white">
-      <div className="container-custom py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-tech-blue to-azure rounded-lg flex items-center justify-center font-bold text-white">
-                TR
-              </div>
-              <div>
-                <div className="font-semibold text-sm">
-                  TR Application Development
-                </div>
-                <div className="text-xs text-slate-400">
-                  A Division of TR Software Development Consulting (Pty) Ltd
-                </div>
-              </div>
-            </div>
-            <p className="text-slate-400 text-sm max-w-md mb-6">
-              We design, build, and integrate practical business applications —
-              and deploy them into modern cloud environments.
-            </p>
-            <p className="text-tech-blue font-semibold text-sm">
-              We build applications. We connect systems. We deploy solutions.
-            </p>
+    <>
+      <section className="bg-navy text-white section-padding relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-navy via-deep-navy to-navy" />
+        <div className="relative container-custom">
+          <div className="badge-azure mb-6 bg-azure/20 text-azure">
+            Services
           </div>
-
-          <div>
-            <h4 className="text-white mb-4 text-sm font-semibold uppercase tracking-wider">
-              Services
-            </h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  to="/services"
-                  className="text-slate-400 hover:text-tech-blue transition-colors"
-                >
-                  Custom Application Development
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="text-slate-400 hover:text-tech-blue transition-colors"
-                >
-                  Systems Integration
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="text-slate-400 hover:text-tech-blue transition-colors"
-                >
-                  Application Modernisation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="text-slate-400 hover:text-tech-blue transition-colors"
-                >
-                  Cloud Deployment
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="text-slate-400 hover:text-tech-blue transition-colors"
-                >
-                  DevOps & CI/CD
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white mb-4 text-sm font-semibold uppercase tracking-wider">
-              Contact
-            </h4>
-            <ul className="space-y-3 text-sm text-slate-400">
-              <li className="flex items-center gap-2">
-                <MapPin size={16} className="text-tech-blue flex-shrink-0" />
-                Midrand, Gauteng
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail size={16} className="text-tech-blue flex-shrink-0" />
-                <a
-                  href="mailto:rakgoropothabang@gmail.com"
-                  className="hover:text-tech-blue transition-colors"
-                >
-                  rakgoropothabang@gmail.com
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone size={16} className="text-tech-blue flex-shrink-0" />
-                <a
-                  href="tel:+27696350962"
-                  className="hover:text-tech-blue transition-colors"
-                >
-                  (+27) 69 635 0962
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
-          <p>
-            © {new Date().getFullYear()} TR Software Development Consulting
-            (Pty) Ltd. All rights reserved.
-          </p>
-          <p className="text-xs">
-            TR Application Development is a division of TR Software Development
-            Consulting (Pty) Ltd.
+          <h1 className="text-white mb-4 max-w-3xl">
+            Ten core service areas across the application lifecycle.
+          </h1>
+          <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
+            From requirements and architecture through development, integration,
+            and cloud deployment.
           </p>
         </div>
-      </div>
-    </footer>
+      </section>
+
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {services.map((service) => (
+              <div key={service.title} className="card">
+                <div className="card-icon">
+                  <service.icon size={22} />
+                </div>
+                <h3 className="mb-3">{service.title}</h3>
+                <p className="text-slate-gray mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                <ul className="space-y-2">
+                  {service.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex gap-3 text-sm text-slate-gray"
+                    >
+                      <Check
+                        size={16}
+                        className="text-african-green flex-shrink-0 mt-0.5"
+                      />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Commercial models */}
+      <section className="section-padding bg-slate-50">
+        <div className="container-custom">
+          <h2 className="mb-4">Commercial models</h2>
+          <p className="text-lg text-slate-gray mb-12 max-w-3xl leading-relaxed">
+            Four engagement models depending on scope, requirements definition,
+            and delivery responsibility.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Fixed-Price Project",
+                desc: "Requirements and deliverables sufficiently defined.",
+                range: "R80,000 – R500,000+",
+              },
+              {
+                title: "Time & Materials",
+                desc: "Evolving requirements, enterprise development, architecture work.",
+                range: "Rate-based",
+              },
+              {
+                title: "Discovery & Architecture",
+                desc: "Structured assessment before implementation commitment.",
+                range: "R15,000 – R75,000+",
+              },
+              {
+                title: "Application Implementation",
+                desc: "Full delivery from discovery through deployment and handover.",
+                range: "Scoped per project",
+              },
+            ].map((model) => (
+              <div
+                key={model.title}
+                className="bg-white p-6 rounded-xl border border-slate-200"
+              >
+                <h4 className="mb-2">{model.title}</h4>
+                <p className="text-slate-gray text-sm mb-4 leading-relaxed">
+                  {model.desc}
+                </p>
+                <p className="text-tech-blue font-semibold text-sm font-mono">
+                  {model.range}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-navy text-white">
+        <div className="container-custom text-center">
+          <h2 className="text-white mb-4">Not sure where to start?</h2>
+          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+            A Discovery engagement gives you requirements analysis,
+            architecture, and a delivery roadmap before any implementation
+            commitment.
+          </p>
+          <Link to="/contact" className="btn-primary">
+            Start with a Discovery
+            <ArrowRight size={18} />
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
