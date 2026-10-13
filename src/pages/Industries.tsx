@@ -18,7 +18,7 @@ export default function Industries() {
       icon: Landmark,
       title: "Government & Public Sector",
       description:
-        "National departments, provincial departments, municipalities, government agencies, public entities, and state-owned enterprises.",
+        "National departments, provincial departments, municipalities, government agencies, public entities and state-owned enterprises.",
       needs: [
         "Digital applications",
         "Citizen-facing portals",
@@ -34,7 +34,7 @@ export default function Industries() {
       icon: Building2,
       title: "Financial Services",
       description:
-        "Banks, insurers, fintech organisations, and investment firms.",
+        "Banks, insurers, fintech organisations and investment firms.",
       needs: [
         "Customer-facing applications",
         "Internal workflow systems",
@@ -48,7 +48,7 @@ export default function Industries() {
       icon: ShoppingCart,
       title: "Retail & E-commerce",
       description:
-        "Retail groups, e-commerce platforms, and distribution organisations.",
+        "Retail groups, e-commerce platforms and distribution organisations.",
       needs: [
         "Customer portals",
         "Order management systems",
@@ -61,7 +61,7 @@ export default function Industries() {
       icon: HeartPulse,
       title: "Healthcare",
       description:
-        "Healthcare organisations, medical technology companies, and healthcare administration.",
+        "Healthcare organisations, medical technology companies and healthcare administration.",
       needs: [
         "Patient portals",
         "Internal systems",
@@ -86,7 +86,7 @@ export default function Industries() {
       icon: Truck,
       title: "Logistics & Supply Chain",
       description:
-        "Logistics companies, transportation, and supply-chain organisations.",
+        "Logistics companies, transportation and supply-chain organisations.",
       needs: [
         "Dispatch and tracking systems",
         "Customer portals",
@@ -140,7 +140,7 @@ export default function Industries() {
             Where software and system integration are strategically important.
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
-            We work with organisations that need modern, integrated, and
+            We work with organisations that need modern, integrated and
             deployable applications not just websites.
           </p>
         </div>
@@ -264,7 +264,7 @@ export default function Industries() {
               A larger technology company may win an enterprise or government
               contract but require additional application engineering capacity.
               TR can participate as a development partner, subcontractor, .NET
-              development partner, integration partner, or Azure implementation
+              development partner, integration partner or Azure implementation
               partner.
             </p>
           </div>
@@ -277,11 +277,11 @@ export default function Industries() {
               },
               {
                 title: "Integration Partner",
-                desc: "Systems integration, API development, and Azure integration services.",
+                desc: "Systems integration, API development and Azure integration services.",
               },
               {
                 title: "Azure Implementation Partner",
-                desc: "Cloud deployment, Terraform, Docker, and CI/CD pipelines.",
+                desc: "Cloud deployment, Terraform, Docker and CI/CD pipelines.",
               },
             ].map((item) => (
               <div

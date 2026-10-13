@@ -86,10 +86,10 @@ export default function Technology() {
           name: "Azure Functions",
           desc: "Serverless compute for integration and background work",
         },
-        { name: "Azure Storage", desc: "Blob, file, and queue storage" },
+        { name: "Azure Storage", desc: "Blob, file and queue storage" },
         {
           name: "Azure API Management",
-          desc: "API gateway, throttling, and security",
+          desc: "API gateway, throttling and security",
         },
         {
           name: "Azure Service Bus",
@@ -118,11 +118,11 @@ export default function Technology() {
         },
         {
           name: "CI/CD Pipelines",
-          desc: "Automated build, test, and deployment",
+          desc: "Automated build, test and deployment",
         },
         {
           name: "Environment Management",
-          desc: "Dev, staging, and production parity",
+          desc: "Dev, staging and production parity",
         },
       ],
     },
@@ -198,7 +198,7 @@ export default function Technology() {
     { name: "Node.js", desc: "JavaScript-based backends" },
     { name: "Custom APIs", desc: "Client-built or third-party APIs" },
     { name: "Government systems", desc: "Public-sector platforms and portals" },
-    { name: "Payment gateways", desc: "PayFast, Stripe, and local providers" },
+    { name: "Payment gateways", desc: "PayFast, Stripe and local providers" },
     { name: "Third-party SaaS", desc: "Any service with an API" },
   ];
 
@@ -219,10 +219,10 @@ export default function Technology() {
             Microsoft focused engineering. Built for real client environments.
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
-            Our primary ecosystem is Microsoft  .NET, Azure, SQL Server, and
+            Our primary ecosystem is Microsoft  .NET, Azure, SQL Server and
             Azure DevOps with modern React and Angular frontends. We also
             integrate with heterogeneous environments including Java, Oracle,
-            SAP, Salesforce, and legacy systems.
+            SAP, Salesforce and legacy systems.
           </p>
         </div>
       </section>
@@ -312,7 +312,7 @@ export default function Technology() {
               <p className="text-slate-gray mb-6 leading-relaxed">
                 The Microsoft platform provides a coherent enterprise
                 application platform spanning application code, database, cloud
-                infrastructure, and automated deployment. It is the stack most
+                infrastructure and automated deployment. It is the stack most
                 South African enterprises already use.
               </p>
               <ul className="space-y-3">
@@ -371,7 +371,7 @@ export default function Technology() {
             {[
               {
                 title: "Clean Architecture",
-                desc: "Domain, Application, Infrastructure, and API layers are separated. Business logic does not depend on infrastructure.",
+                desc: "Domain, Application, Infrastructure and API layers are separated. Business logic does not depend on infrastructure.",
               },
               {
                 title: "Automated testing",
@@ -379,7 +379,7 @@ export default function Technology() {
               },
               {
                 title: "CI/CD from day one",
-                desc: "Every project has automated build, test, and deployment pipelines. No manual deployment.",
+                desc: "Every project has automated build, test and deployment pipelines. No manual deployment.",
               },
               {
                 title: "Infrastructure as Code",
@@ -387,11 +387,11 @@ export default function Technology() {
               },
               {
                 title: "Full code ownership",
-                desc: "The client receives the code, the documentation, and the infrastructure. No vendor lock-in.",
+                desc: "The client receives the code, the documentation and the infrastructure. No vendor lock-in.",
               },
               {
                 title: "Documentation",
-                desc: "Architecture docs, API docs, and setup guides. The next person who works on the system understands it.",
+                desc: "Architecture docs, API docs and setup guides. The next person who works on the system understands it.",
               },
             ].map((principle) => (
               <div

@@ -66,7 +66,7 @@ export default function Services() {
         "Enable different business systems to communicate and exchange information.",
       features: [
         "REST API integration",
-        "CRM, ERP, and HR system integration",
+        "CRM, ERP and HR system integration",
         "Payment and government-system integration",
         "Database and cloud-service integration",
         "Legacy-system integration",
@@ -93,7 +93,7 @@ export default function Services() {
         "Deploy applications to Microsoft Azure with repeatable processes.",
       features: [
         "Azure App Service deployment",
-        "Azure SQL, Storage, and Functions",
+        "Azure SQL, Storage and Functions",
         "Azure API Management",
         "Application and environment configuration",
         "Networking integration",
@@ -103,7 +103,7 @@ export default function Services() {
     {
       icon: GitBranch,
       title: "DevOps & CI/CD",
-      description: "Automated build, test, and deployment pipelines.",
+      description: "Automated build, test and deployment pipelines.",
       features: [
         "Azure DevOps implementation",
         "GitHub Actions",
@@ -146,8 +146,8 @@ export default function Services() {
       description:
         "Architecture services delivered as part of application engagements.",
       features: [
-        "Application, API, and database architecture",
-        "Cloud, integration, and deployment architecture",
+        "Application, API and database architecture",
+        "Cloud, integration and deployment architecture",
         "Security and container architecture",
         "Clean Architecture and Layered Architecture",
         "Domain-Driven Design and CQRS",
@@ -243,7 +243,7 @@ export default function Services() {
         <div className="container-custom">
           <h2 className="mb-4">Technologies we use</h2>
           <p className="text-lg text-slate-gray mb-12 max-w-3xl leading-relaxed">
-            Our primary ecosystem is Microsoft .NET, Azure, SQL Server, and
+            Our primary ecosystem is Microsoft .NET, Azure, SQL Server and
             Azure DevOps with modern React and Angular frontends. We also
             integrate with heterogeneous client environments including Java,
             Oracle, PostgreSQL, SAP, Salesforce and legacy systems.
@@ -321,7 +321,7 @@ export default function Services() {
           <h2 className="text-white mb-4">Not sure which service you need?</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             Start with a discovery engagement. We assess your requirements,
-            design the architecture, and give you a delivery roadmap before
+            design the architecture and give you a delivery roadmap before
             any code is written.
           </p>
           <Link to="/contact" className="btn-primary">

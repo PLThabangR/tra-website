@@ -20,7 +20,7 @@ export default function Home() {
     {
       icon: Users,
       title: "Staff Portals",
-      desc: "One place for tasks, documents, leave, and approvals. No more hunting through email.",
+      desc: "One place for tasks, documents, leave and approvals. No more hunting through email.",
     },
     {
       icon: Workflow,
@@ -30,7 +30,7 @@ export default function Home() {
     {
       icon: ShoppingCart,
       title: "Customer Portals",
-      desc: "Give customers self-service access to orders, invoices, and status.",
+      desc: "Give customers self-service access to orders, invoices and status.",
     },
     {
       icon: Database,
@@ -40,7 +40,7 @@ export default function Home() {
     {
       icon: Plug,
       title: "API Integration",
-      desc: "Make your CRM, accounting, and HR systems talk to each other.",
+      desc: "Make your CRM, accounting and HR systems talk to each other.",
     },
     {
       icon: RefreshCw,
@@ -50,7 +50,7 @@ export default function Home() {
     {
       icon: Cloud,
       title: "Cloud Deployment",
-      desc: "Deploy to Microsoft Azure with reliability, scalability, and security.",
+      desc: "Deploy to Microsoft Azure with reliability, scalability and security.",
     },
     {
       icon: BarChart3,
@@ -64,13 +64,13 @@ export default function Home() {
       icon: Code2,
       title: "Custom Application Development",
       description:
-        "Staff portals, workflow systems, customer portals, and line-of-business applications.",
+        "Staff portals, workflow systems, customer portals and line-of-business applications.",
     },
     {
       icon: Plug,
       title: "Systems Integration",
       description:
-        "Connect CRM, ERP, HR, payroll, and legacy systems through secure APIs.",
+        "Connect CRM, ERP, HR, payroll and legacy systems through secure APIs.",
     },
     {
       icon: RefreshCw,
@@ -82,7 +82,7 @@ export default function Home() {
       icon: Cloud,
       title: "Cloud Deployment",
       description:
-        "Deploy to Microsoft Azure with App Service, Azure SQL, Functions, and API Management.",
+        "Deploy to Microsoft Azure with App Service, Azure SQL, Functions and API Management.",
     },
     {
       icon: GitBranch,
@@ -112,12 +112,12 @@ export default function Home() {
     {
       num: "03",
       title: "Development",
-      desc: "Iterative development using .NET, React or Angular, and SQL.",
+      desc: "Iterative development using .NET, React or Angular and SQL.",
     },
     {
       num: "04",
       title: "Integration",
-      desc: "Connect to existing systems, APIs, and data sources.",
+      desc: "Connect to existing systems, APIs and data sources.",
     },
     {
       num: "05",
@@ -127,7 +127,7 @@ export default function Home() {
     {
       num: "06",
       title: "CI/CD",
-      desc: "Automated build, test, and deployment pipelines.",
+      desc: "Automated build, test and deployment pipelines.",
     },
     {
       num: "07",
@@ -137,7 +137,7 @@ export default function Home() {
     {
       num: "08",
       title: "Handover",
-      desc: "Documentation, training, and full code ownership.",
+      desc: "Documentation, training and full code ownership.",
     },
   ];
 
@@ -158,11 +158,11 @@ export default function Home() {
               Consulting (Pty) Ltd
             </div>
             <h1 className="text-white mb-6">
-              We design, build, and integrate practical business applications.
+              We design, build and integrate practical business applications.
             </h1>
             <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-3xl">
               Application development, systems integration, and cloud
-              deployment. Built to enterprise-grade standards. Priced and
+              deployment. Built to enterprise grade standards. Priced and
               delivered for mid-market organisations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

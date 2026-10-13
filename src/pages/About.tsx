@@ -90,11 +90,11 @@ export default function About() {
             {[
               {
                 title: "Practical delivery",
-                desc: "We build applications that solve real business problems, not theoretical architectures.",
+                desc: "We build applications that solve real business problems not theoretical architectures.",
               },
               {
                 title: "Full code ownership",
-                desc: "No vendor lock-in. You receive the code, the documentation, and the infrastructure.",
+                desc: "No vendor lock-in. You receive the code, the documentation and the infrastructure.",
               },
               {
                 title: "Delivery flexibility",
@@ -102,7 +102,7 @@ export default function About() {
               },
               {
                 title: "Microsoft focus",
-                desc: "Deep capability around .NET, Azure, SQL Server, and Azure DevOps.",
+                desc: "Deep capability around .NET, Azure, SQL Server and Azure DevOps.",
               },
               {
                 title: "Integration capability",

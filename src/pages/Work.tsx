@@ -8,7 +8,7 @@ export default function Work() {
       title: "Motor Insurance App",
       status: "Completed  Flagship Reference",
       description:
-        "A full-stack motor insurance management application built end-to-end on .NET, React, TypeScript, SQL Server, and Azure.",
+        "A full-stack motor insurance management application built end-to-end on .NET, React, TypeScript, SQL Server and Azure.",
       outcomes: [
         "Policy and quote management",
         "Claims workflow",
@@ -32,7 +32,7 @@ export default function Work() {
       title: "Staff Portal & Workflow",
       status: "In Development",
       description:
-        "A staff portal with workflow digitisation, role-based access, and audit trails for a mid-market professional services firm.",
+        "A staff portal with workflow digitisation, role-based access and audit trails for a mid-market professional services firm.",
       outcomes: [
         "Digital leave requests and approvals",
         "Document repository with permissions",
@@ -47,7 +47,7 @@ export default function Work() {
       title: "Order Status Self-Service Portal",
       status: "Planned",
       description:
-        "A customer-facing portal for real-time order status, invoice history, and document access.",
+        "A customer-facing portal for real-time order status, invoice history and document access.",
       outcomes: [
         "Real-time order tracking",
         "Invoice and document download",
@@ -87,7 +87,7 @@ export default function Work() {
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
             Every project is delivered with full code ownership, milestone
-            payments, and a written scope. Here is what we have built.
+            payments and a written scope. Here is what we have built.
           </p>
         </div>
       </section>
@@ -171,7 +171,7 @@ export default function Work() {
           </h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             We can walk you through the Motor Insurance App architecture,
-            decisions, and outcomes. No sales pitch just the technical story.
+            decisions and outcomes. No sales pitch just the technical story.
           </p>
           <Link to="/contact" className="btn-primary">
             Request a Walkthrough
