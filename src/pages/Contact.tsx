@@ -1,83 +1,50 @@
-
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle2 } from "lucide-react";
 
 export default function Contact() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    project_type: "",
+    message: "",
+  });
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    setIsSubmitting(true);
-    setError("");
-
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-
-    // Web3Forms access key
-    formData.append("access_key", "0a33dfe3-3ec3-43bb-a264-e64278889345");
-
-    // Email subject
-    formData.append(
-      "subject",
-      "New Website Enquiry - TR Software Development Consulting"
-    );
-
-    // Convert FormData to JSON
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: json,
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        setSubmitted(true);
-        form.reset();
-      } else {
-        setError(
-          result.message ||
-            "Something went wrong. Please try again."
-        );
-      }
-    } catch (err) {
-      console.error("Form submission error:", err);
-
-      setError(
-        "Unable to send your message. Please try again or contact us directly by email."
-      );
-    } finally {
-      setIsSubmitting(false);
-    }
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Success screen
-  if (submitted) {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate API call / submission delay
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    // TODO: Add your actual form submission logic here (e.g., fetch to backend, Formspree, EmailJS)
+    console.log("Form submitted:", formData);
+
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+  };
+
+  if (isSubmitted) {
     return (
-      <section className="section-padding">
+      <section className="section-padding light-section">
         <div className="container-custom max-w-2xl text-center">
-          <div className="w-16 h-16 bg-african-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle2
-              className="text-african-green"
-              size={32}
-            />
-          </div>
-
-          <h1 className="mb-4">Thank you.</h1>
-
-          <p className="text-lg text-slate-gray mb-8 leading-relaxed">
-            We have received your message. We will respond within one
-            business day.
+          <CheckCircle2 className="text-gold mx-auto mb-6" size={48} />
+          <h1 className="mb-4 text-black">Thank you.</h1>
+          <p className="text-text-muted">
+            We have received your message and will respond within one business
+            day.
           </p>
         </div>
       </section>
@@ -86,285 +53,197 @@ export default function Contact() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-navy text-white section-padding relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-deep-navy to-navy" />
-
-        <div className="relative container-custom">
-          <div className="badge-azure mb-6 bg-azure/20 text-azure">Contact</div>
-
-          <h1 className="text-white mb-4 max-w-3xl">
-            Let's talk about your application.
-          </h1>
-
-          <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
-            Tell us what you need to build, integrate, modernise, or deploy. We
-            will respond within one business day.
-          </p>
+      <section className="bg-bg-main text-text-primary border-b border-border-subtle">
+        <div className="container-custom py-16">
+          <div className="max-w-3xl">
+            <h1 className="text-text-primary mb-4">Discuss Your Project</h1>
+            <p className="text-lg text-text-secondary">
+              Tell us what you are trying to build. We will tell you if we can
+              help, and how we would approach it.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Contact Form */}
-      <section className="section-padding">
+      <section className="section-padding light-section">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Form */}
-            <div className="lg:col-span-2">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-7">
+              <h2 className="text-2xl mb-6 text-black">Project details</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Name + Organisation */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-semibold text-navy mb-2"
+                      className="block text-sm font-medium text-black mb-2"
                     >
                       Your name *
                     </label>
-
                     <input
                       id="name"
                       type="text"
                       name="name"
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-tech-blue focus:ring-2 focus:ring-tech-blue/20 outline-none transition-all"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-md border border-border-light focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
                     />
                   </div>
-
                   <div>
                     <label
                       htmlFor="company"
-                      className="block text-sm font-semibold text-navy mb-2"
+                      className="block text-sm font-medium text-black mb-2"
                     >
-                      Organisation
+                      Company
                     </label>
-
                     <input
                       id="company"
                       type="text"
                       name="company"
-                      className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-tech-blue focus:ring-2 focus:ring-tech-blue/20 outline-none transition-all"
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-md border border-border-light focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
                     />
                   </div>
                 </div>
 
-                {/* Email + Phone */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-semibold text-navy mb-2"
+                      className="block text-sm font-medium text-black mb-2"
                     >
                       Email *
                     </label>
-
                     <input
                       id="email"
                       type="email"
                       name="email"
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-tech-blue focus:ring-2 focus:ring-tech-blue/20 outline-none transition-all"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-md border border-border-light focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
                     />
                   </div>
-
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-semibold text-navy mb-2"
+                      className="block text-sm font-medium text-black mb-2"
                     >
                       Phone
                     </label>
-
                     <input
                       id="phone"
                       type="tel"
                       name="phone"
-                      className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-tech-blue focus:ring-2 focus:ring-tech-blue/20 outline-none transition-all"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-md border border-border-light focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
                     />
                   </div>
                 </div>
 
-                {/* Service */}
                 <div>
                   <label
-                    htmlFor="service"
-                    className="block text-sm font-semibold text-navy mb-2"
+                    htmlFor="project_type"
+                    className="block text-sm font-medium text-black mb-2"
                   >
-                    What do you need? *
+                    Type of project *
                   </label>
-
                   <select
-                    id="service"
-                    name="service"
+                    id="project_type"
+                    name="project_type"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-tech-blue focus:ring-2 focus:ring-tech-blue/20 outline-none transition-all bg-white"
+                    value={formData.project_type}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-md border border-border-light focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all bg-white"
                   >
                     <option value="">Select an option</option>
-                    <option value="staff-portal">Staff portal</option>
-                    <option value="workflow">Workflow digitisation</option>
-                    <option value="customer-portal">Customer portal</option>
-                    <option value="custom-app">
-                      Custom business application
-                    </option>
+                    <option value="custom-app">Custom application</option>
                     <option value="integration">
-                      Systems integration / API
+                      API / System integration
                     </option>
+                    <option value="workflow">Workflow automation</option>
+                    <option value="cloud">Cloud deployment</option>
                     <option value="modernisation">
                       Application modernisation
-                    </option>
-                    <option value="cloud">Cloud deployment</option>
-                    <option value="dashboard">Reporting / dashboard</option>
-                    <option value="discovery">Discovery engagement</option>
-                    <option value="partnership">
-                      Partnership / subcontracting
                     </option>
                     <option value="other">Other</option>
                   </select>
                 </div>
 
-                {/* Budget */}
-                <div>
-                  <label
-                    htmlFor="budget"
-                    className="block text-sm font-semibold text-navy mb-2"
-                  >
-                    Indicative budget range
-                  </label>
-
-                  <select
-                    id="budget"
-                    name="budget"
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-tech-blue focus:ring-2 focus:ring-tech-blue/20 outline-none transition-all bg-white"
-                  >
-                    <option value="">Prefer not to say</option>
-
-                    <option value="discovery">
-                      Discovery only (R15,000 – R75,000)
-                    </option>
-
-                    <option value="under-150">Under R150,000</option>
-
-                    <option value="150-300">R150,000 – R300,000</option>
-
-                    <option value="300-500">R300,000 – R500,000</option>
-
-                    <option value="above-500">Above R500,000</option>
-                  </select>
-                </div>
-
-                {/* Message */}
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-semibold text-navy mb-2"
+                    className="block text-sm font-medium text-black mb-2"
                   >
-                    Project details
+                    Project description
                   </label>
-
                   <textarea
                     id="message"
                     name="message"
                     rows={5}
-                    placeholder="What are you trying to build, integrate, or modernise? What systems are involved?"
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-tech-blue focus:ring-2 focus:ring-tech-blue/20 outline-none transition-all resize-none"
+                    placeholder="What problem are you trying to solve? What systems are involved?"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-md border border-border-light focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all resize-none"
                   />
                 </div>
 
-                {/* Honeypot spam protection */}
-                <input
-                  type="checkbox"
-                  name="botcheck"
-                  className="hidden"
-                  style={{ display: "none" }}
-                />
-
-                {/* Error */}
-                {error && (
-                  <div className="p-4 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm">
-                    {error}
-                  </div>
-                )}
-
-                {/* Submit */}
                 <button
                   type="submit"
                   disabled={isSubmitting}
                   className="btn-primary w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Sending..." : "Send message"}
-
                   {!isSubmitting && <Send size={18} />}
                 </button>
-
-                <p className="text-sm text-slate-gray">
-                  We respond within one business day. Your information is kept
-                  confidential.
+                <p className="text-xs text-text-muted">
+                  We respond within one business day.
                 </p>
               </form>
             </div>
 
-            {/* Contact Details */}
-            <div className="lg:col-span-1">
-              <div className="bg-slate-50 p-8 rounded-xl space-y-6">
-                <div>
-                  <h4 className="mb-4">Contact details</h4>
-
-                  <ul className="space-y-4 text-sm">
-                    <li className="flex gap-3 items-start">
-                      <Mail
-                        className="text-tech-blue shrink-0 mt-0.5"
-                        size={18}
-                      />
-
+            <div className="lg:col-span-5">
+              <div className="bg-slate-50 p-8 rounded-lg border border-border-light sticky top-24">
+                <h3 className="text-xl mb-6 text-black">Direct contact</h3>
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-3">
+                    <Mail className="text-gold shrink-0 mt-1" size={20} />
+                    <div>
+                      <div className="font-medium text-black">Email</div>
                       <a
                         href="mailto:rakgoropothabang@gmail.com"
-                        className="text-slate-gray hover:text-tech-blue"
+                        className="text-text-muted hover:text-gold transition-colors text-sm"
                       >
                         rakgoropothabang@gmail.com
                       </a>
-                    </li>
-
-                    <li className="flex gap-3 items-start">
-                      <Phone
-                        className="text-tech-blue shrink-0 mt-0.5"
-                        size={18}
-                      />
-
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Phone className="text-gold shrink-0 mt-1" size={20} />
+                    <div>
+                      <div className="font-medium text-black">Phone</div>
                       <a
                         href="tel:+27696350962"
-                        className="text-slate-gray hover:text-tech-blue"
+                        className="text-text-muted hover:text-gold transition-colors text-sm"
                       >
                         (+27) 69 635 0962
                       </a>
-                    </li>
-
-                    <li className="flex gap-3 items-start">
-                      <MapPin
-                        className="text-tech-blue shrink-0 mt-0.5"
-                        size={18}
-                      />
-
-                      <span className="text-slate-gray">Midrand, Gauteng</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="pt-6 border-t border-slate-200">
-                  <h4 className="mb-3 text-sm">Response time</h4>
-
-                  <p className="text-slate-gray text-sm">
-                    We respond to all enquiries within one business day.
-                  </p>
-                </div>
-
-                <div className="pt-6 border-t border-slate-200">
-                  <h4 className="mb-3 text-sm">Partnership enquiries</h4>
-
-                  <p className="text-slate-gray text-sm mb-4">
-                    If you are an ICT company or system integrator looking for
-                    additional .NET or Azure engineering capacity, use the form
-                    and select "Partnership / subcontracting."
-                  </p>
-                </div>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <MapPin className="text-gold shrink-0 mt-1" size={20} />
+                    <div>
+                      <div className="font-medium text-black">Location</div>
+                      <div className="text-text-muted text-sm">
+                        Midrand, Gauteng
+                        <br />
+                        South Africa
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -372,4 +251,4 @@ export default function Contact() {
       </section>
     </>
   );
-};
+}

@@ -9,15 +9,14 @@ export default function Header() {
   const navLinks = [
     { to: "/", label: "Home" },
     { to: "/services", label: "Services" },
-    { to: "/technology", label: "Technology" },
-    { to: "/industries", label: "Industries" },
-       { to: '/work', label: 'Work' },
+    { to: "/work", label: "Projects" },
+    { to: "/approach", label: "Approach" },
     { to: "/about", label: "About" },
     { to: "/contact", label: "Contact" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0e1129] backdrop-blur-md border-b border-white/10">
+    <header className="sticky top-0 z-50 bg-bg-main border-b border-border-subtle">
       <div className="container-custom flex items-center justify-between py-4">
         <a
           href="https://trsoftwaredev.vercel.app/"
@@ -35,28 +34,27 @@ export default function Header() {
             className="h-16 w-auto hidden md:block"
           />
         </a>
-
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              className={`text-sm font-medium transition-colors ${
                 location.pathname === link.to
-                  ? "text-tech-blue bg-white/5"
-                  : "text-white/80 hover:text-white hover:bg-white/5"
+                  ? "text-gold"
+                  : "text-text-secondary hover:text-text-primary"
               }`}
             >
               {link.label}
             </Link>
           ))}
-          <Link to="/contact" className="btn-primary text-sm ml-4">
-            Start a Project
+          <Link to="/contact" className="btn-primary py-2 px-4 text-sm ml-4">
+            Discuss Your Project
           </Link>
         </nav>
 
         <button
-          className="lg:hidden text-white p-2"
+          className="lg:hidden text-text-primary p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -65,17 +63,17 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <nav className="lg:hidden bg-navy border-t border-white/10">
+        <nav className="lg:hidden bg-bg-main border-t border-border-subtle">
           <div className="container-custom py-4 flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
                 onClick={() => setMenuOpen(false)}
-                className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                className={`px-4 py-3 text-sm font-medium rounded-md ${
                   location.pathname === link.to
-                    ? "text-tech-blue bg-white/5"
-                    : "text-white/80 hover:text-white hover:bg-white/5"
+                    ? "text-gold bg-gold/5"
+                    : "text-text-secondary hover:text-text-primary"
                 }`}
               >
                 {link.label}
@@ -86,7 +84,7 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
               className="btn-primary text-sm mt-2"
             >
-              Start a Project
+              Discuss Your Project
             </Link>
           </div>
         </nav>

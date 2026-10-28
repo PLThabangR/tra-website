@@ -1,127 +1,121 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-deep-navy text-white">
+    <footer className="bg-bg-main border-t border-border-subtle">
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-linear-to-br from-tech-blue to-azure rounded-lg flex items-center justify-center font-bold text-white">
+              <div className="w-8 h-8 bg-gold flex items-center justify-center font-bold text-btn-text text-sm rounded-sm">
                 TR
               </div>
               <div>
-                <div className="font-semibold text-sm">
-                  TR Application Development
+                <div className="font-sans font-semibold text-sm text-text-primary tracking-wide">
+                  TR APPLICATION DEVELOPMENT
                 </div>
-                <div className="text-xs text-slate-400">
-                  A Division of TR Software Development Consulting (Pty) Ltd
+                <div className="font-sans text-xs text-text-secondary">
+                  A division of TR Software Development Consulting (Pty) Ltd
                 </div>
               </div>
             </div>
-            <p className="text-slate-400 text-sm max-w-md mb-6">
-              We engineer and integrate enterprise applications and deploy them
-              into modern cloud environments. Application Development + Systems
-              Integration + Cloud Deployment.
+            <p className="text-text-secondary text-sm max-w-sm mb-6 leading-relaxed">
+              We design, build and integrate business applications that help
+              teams work more effectively from internal tools and workflow
+              automation to API integrations and cloud deployed solutions.
             </p>
-            <p className="text-tech-blue font-semibold text-sm">
-              We build applications. We connect systems. We deploy solutions.
-            </p>
+            <a
+              href="https://tr-software.co.za"
+              className="inline-flex items-center gap-1 text-sm text-gold hover:text-gold-hover transition-colors"
+            >
+              Looking for application support instead? Visit the parent company{" "}
+              <ArrowUpRight size={14} />
+            </a>
           </div>
 
           <div>
-            <h4 className="text-white mb-4 text-sm font-semibold uppercase tracking-wider">
+            <h4 className="text-text-primary mb-4 text-sm font-semibold">
               Services
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   to="/services"
-                  className="text-slate-400 hover:text-tech-blue transition-colors"
+                  className="text-text-secondary hover:text-gold transition-colors"
                 >
-                  Custom Application Development
+                  Custom Applications
                 </Link>
               </li>
               <li>
                 <Link
                   to="/services"
-                  className="text-slate-400 hover:text-tech-blue transition-colors"
+                  className="text-text-secondary hover:text-gold transition-colors"
                 >
-                  Systems Integration
+                  API Integration
                 </Link>
               </li>
               <li>
                 <Link
                   to="/services"
-                  className="text-slate-400 hover:text-tech-blue transition-colors"
+                  className="text-text-secondary hover:text-gold transition-colors"
                 >
-                  Application Modernisation
+                  Workflow Automation
                 </Link>
               </li>
               <li>
                 <Link
                   to="/services"
-                  className="text-slate-400 hover:text-tech-blue transition-colors"
+                  className="text-text-secondary hover:text-gold transition-colors"
                 >
                   Cloud Deployment
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="text-slate-400 hover:text-tech-blue transition-colors"
-                >
-                  DevOps & CI/CD
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white mb-4 text-sm font-semibold uppercase tracking-wider">
+            <h4 className="text-text-primary mb-4 text-sm font-semibold">
               Contact
             </h4>
-            <ul className="space-y-3 text-sm text-slate-400">
-              <li className="flex items-center gap-2">
-                <MapPin size={16} className="text-tech-blue shrink-0" />
-                Midrand, Gauteng
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail size={16} className="text-tech-blue shrink-0" />
+            <ul className="space-y-3 text-sm text-text-secondary">
+              <li className="flex items-start gap-2">
+                <Mail size={16} className="text-gold shrink-0 mt-0.5" />
                 <a
                   href="mailto:rakgoropothabang@gmail.com"
-                  className="hover:text-tech-blue transition-colors"
+                  className="hover:text-gold transition-colors"
                 >
                   rakgoropothabang@gmail.com
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone size={16} className="text-tech-blue shrink-0" />
+              <li className="flex items-start gap-2">
+                <Phone size={16} className="text-gold shrink-0 mt-0.5" />
                 <a
                   href="tel:+27696350962"
-                  className="hover:text-tech-blue transition-colors"
+                  className="hover:text-gold transition-colors"
                 >
-                  (+27) 69 635 0962
+                  (+27) 70 762 0683
                 </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin size={16} className="text-gold shrink-0 mt-0.5" />
+                <span>Midrand, Gauteng</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
+        <div className="border-t border-border-subtle mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-text-secondary">
           <p>
             © {new Date().getFullYear()} TR Software Development Consulting
             (Pty) Ltd. All rights reserved.
           </p>
-          <p className="text-xs">
-            TR Application Development Consulting  Enterprise Application
-            Engineering
+          <p>
+             TR Software Development
+            Consulting (Pty) Ltd.
           </p>
         </div>
       </div>
     </footer>
   );
 }
-
-

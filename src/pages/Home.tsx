@@ -1,231 +1,142 @@
 import { Link } from "react-router-dom";
 import {
-  Users,
-  Workflow,
-  ShoppingCart,
-  Database,
-  Plug,
-  RefreshCw,
-  Cloud,
-  BarChart3,
   ArrowRight,
-  CheckCircle2,
   Code2,
+  Plug,
   GitBranch,
-  Server,
+  Cloud
 } from "lucide-react";
 
 export default function Home() {
-  const outcomes = [
+  const services = [
     {
-      icon: Users,
-      title: "Staff Portals",
-      desc: "One place for tasks, documents, leave and approvals. No more hunting through email.",
-    },
-    {
-      icon: Workflow,
-      title: "Workflow Digitisation",
-      desc: "Replace paper forms and email approvals with digital workflows and audit trails.",
-    },
-    {
-      icon: ShoppingCart,
-      title: "Customer Portals",
-      desc: "Give customers self-service access to orders, invoices and status.",
-    },
-    {
-      icon: Database,
+      icon: Code2,
       title: "Custom Business Applications",
-      desc: "Replace spreadsheets with proper systems. Roles, reporting, dashboards.",
+      desc: "Internal tools and platforms built to match specific workflows.",
     },
     {
       icon: Plug,
       title: "API Integration",
-      desc: "Make your CRM, accounting and HR systems talk to each other.",
-    },
-    {
-      icon: RefreshCw,
-      title: "Application Modernisation",
-      desc: "Modernise slow, hard-to-change systems without replacing them.",
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Deployment",
-      desc: "Deploy to Microsoft Azure with reliability, scalability and security.",
-    },
-    {
-      icon: BarChart3,
-      title: "Reporting & Dashboards",
-      desc: "See what is happening in your business in real time.",
-    },
-  ];
-
-  const services = [
-    {
-      icon: Code2,
-      title: "Custom Application Development",
-      description:
-        "Staff portals, workflow systems, customer portals and line-of-business applications.",
-    },
-    {
-      icon: Plug,
-      title: "Systems Integration",
-      description:
-        "Connect CRM, ERP, HR, payroll and legacy systems through secure APIs.",
-    },
-    {
-      icon: RefreshCw,
-      title: "Application Modernisation",
-      description:
-        "Move legacy .NET applications to modern architectures with API enablement.",
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Deployment",
-      description:
-        "Deploy to Microsoft Azure with App Service, Azure SQL, Functions and API Management.",
+      desc: "Connecting systems so data flows reliably between them.",
     },
     {
       icon: GitBranch,
-      title: "DevOps & CI/CD",
-      description:
-        "Automated builds, testing, and deployment pipelines using Azure DevOps and Docker.",
+      title: "Workflow Automation",
+      desc: "Replacing manual processes with auditable digital workflows.",
     },
     {
-      icon: Server,
-      title: "Infrastructure as Code",
-      description:
-        "Repeatable, version-controlled Azure infrastructure using Terraform.",
-    },
-  ];
-
-  const process = [
-    {
-      num: "01",
-      title: "Discovery",
-      desc: "Requirements analysis, technical assessment, architecture.",
-    },
-    {
-      num: "02",
-      title: "Architecture",
-      desc: "Application, API, database, cloud, and integration design.",
-    },
-    {
-      num: "03",
-      title: "Development",
-      desc: "Iterative development using .NET, React or Angular and SQL.",
-    },
-    {
-      num: "04",
-      title: "Integration",
-      desc: "Connect to existing systems, APIs and data sources.",
-    },
-    {
-      num: "05",
-      title: "Testing",
-      desc: "Automated and manual testing across the application.",
-    },
-    {
-      num: "06",
-      title: "CI/CD",
-      desc: "Automated build, test and deployment pipelines.",
-    },
-    {
-      num: "07",
-      title: "Deployment",
-      desc: "Azure deployment using Terraform and Docker.",
-    },
-    {
-      num: "08",
-      title: "Handover",
-      desc: "Documentation, training and full code ownership.",
+      icon: Cloud,
+      title: "Cloud Deployment",
+      desc: "Deploying applications into modern cloud environments.",
     },
   ];
 
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-navy text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-deep-navy to-navy" />
-        <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-tech-blue rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-40 w-72 h-72 bg-azure rounded-full blur-3xl" />
-        </div>
-
-        <div className="relative container-custom section-padding">
-          <div className="max-w-4xl">
-            <div className="badge-azure mb-6 bg-azure/20 text-azure">
-              <CheckCircle2 size={14} />A Division of TR Software Development
-              Consulting (Pty) Ltd
+      <section className="bg-bg-main text-text-primary border-b border-border-subtle">
+        <div className="container-custom py-20 md:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-2xl">
+              <div className="font-sans text-sm text-gold mb-4 uppercase tracking-wider">
+                Software Engineering · Integration · Cloud
+              </div>
+              <h1 className="text-text-primary mb-6">
+                We build practical software for real business needs.
+              </h1>
+              <p className="text-lg md:text-xl text-text-secondary mb-8 leading-relaxed">
+                We design, build and integrate business applications that help
+                teams work more effectivelyfrom internal tools and workflow
+                automation to API integrations and cloud deployed solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/contact" className="btn-primary">
+                  Discuss Your Project
+                  <ArrowRight size={18} />
+                </Link>
+                <Link to="/work" className="btn-ghost">
+                  View our work
+                </Link>
+              </div>
+              <div className="mt-8 text-sm font-sans text-text-secondary">
+                Application development · Integrations · Workflow automation ·
+                Cloud deployment
+              </div>
             </div>
-            <h1 className="text-white mb-6">
-              We design, build and integrate practical business applications.
-            </h1>
-            <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-3xl">
-              Application development, systems integration, and cloud
-              deployment. Built to enterprise grade standards. Priced and
-              delivered for mid-market organisations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact" className="btn-primary">
-                Start a Project
-                <ArrowRight size={18} />
-              </Link>
-              <Link to="/work" className="btn-ghost">
-                See Our Work
-              </Link>
+
+            {/* Technical visual */}
+            <div className="hidden lg:block">
+              <div className="bg-bg-main border border-border-subtle p-1 rounded-md">
+                <div className="bg-[#0a0809] border border-border-subtle p-6 font-mono text-sm overflow-hidden relative rounded-sm">
+                  <div className="flex gap-2 mb-4">
+                    <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                    <div className="w-3 h-3 rounded-full bg-gold/80"></div>
+                    <div className="w-3 h-3 rounded-full bg-african-green/80"></div>
+                  </div>
+                  <div className="text-text-secondary space-y-2">
+                    <div>
+                      <span className="text-gold">POST</span>{" "}
+                      /api/v1/workflows/initiate
+                    </div>
+                    <div className="text-text-secondary/70">
+                      Host: api.tr-app-dev.co.za
+                    </div>
+                    <div className="text-text-secondary/70">
+                      Authorization: Bearer *****
+                    </div>
+                    <div className="pt-2">
+                      <span className="text-text-secondary">{`{`}</span>
+                      <br />
+                      <span className="ml-4 text-text-secondary">
+                        "process": "onboarding",
+                      </span>
+                      <br />
+                      <span className="ml-4 text-text-secondary">
+                        "status":{" "}
+                      </span>
+                      <span className="text-african-green">"active"</span>
+                      <span className="text-text-secondary">,</span>
+                      <br />
+                      <span className="ml-4 text-text-secondary">
+                        "services": ["crm", "erp"]
+                      </span>
+                      <br />
+                      <span className="text-text-secondary">{`}`}</span>
+                    </div>
+                    <div className="pt-4 text-african-green">
+                      <span className="inline-block w-2 h-2 bg-african-green rounded-full mr-2"></span>
+                      200 OK — 45ms
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Tech bar */}
-      <section className="bg-white border-b border-slate-200">
-        <div className="container-custom py-6">
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-slate-gray">
-            <span className="font-semibold text-navy">Core stack:</span>
-            {[
-              ".NET",
-              "ASP.NET Core",
-              "React",
-              "Angular",
-              "TypeScript",
-              "SQL Server",
-              "Azure",
-              "Terraform",
-              "Docker",
-            ].map((tech) => (
-              <span
-                key={tech}
-                className="font-mono text-xs px-2 py-1 bg-slate-50 rounded border border-slate-200"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Outcomes */}
-      <section className="section-padding">
+      {/* Services overview */}
+      <section className="section-padding bg-bg-main border-b border-border-subtle">
         <div className="container-custom">
-          <div className="max-w-3xl mb-16">
-            <h2 className="mb-4">
-              We build the applications that run your business.
-            </h2>
-            <p className="text-lg text-slate-gray leading-relaxed">
-              Staff portals, customer portals, workflow systems, dashboards,
-              APIs and the integrations that connect them.
+          <div className="max-w-2xl mb-12">
+            <h2 className="mb-4">What we build</h2>
+            <p className="text-text-secondary">
+              We focus on the specific engineering work required to solve
+              business problems, not generic digital transformation.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {outcomes.map((item) => (
-              <div key={item.title} className="card">
-                <div className="card-icon">
-                  <item.icon size={22} />
+            {services.map((item) => (
+              <div
+                key={item.title}
+                className="border-t border-border-subtle pt-6"
+              >
+                <div className="text-gold mb-4">
+                  <item.icon size={24} />
                 </div>
-                <h4 className="mb-2">{item.title}</h4>
-                <p className="text-slate-gray text-sm leading-relaxed">
+                <h4 className="mb-2 text-text-primary">{item.title}</h4>
+                <p className="text-text-secondary text-sm leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -234,85 +145,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What this means */}
-      <section className="section-padding bg-slate-50">
+      {/* Process */}
+      <section className="section-padding light-section">
         <div className="container-custom">
-          <h2 className="mb-8">What that means for you</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              "Your staff stop wasting time looking for documents and approvals",
-              "Your customers stop phoning to check status",
-              "Your systems stop living in Excel",
-              "Your CRM and accounting finally talk to each other",
-              "Your old system gets modernised, not replaced",
-              "Your dashboard shows you what is actually happening",
-            ].map((item) => (
-              <div
-                key={item}
-                className="flex gap-3 items-start bg-white p-5 rounded-xl border border-slate-200"
-              >
-                <CheckCircle2
-                  className="text-african-green flex-shrink-0 mt-0.5"
-                  size={18}
-                />
-                <span className="text-slate-gray text-sm leading-relaxed">
-                  {item}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="max-w-3xl mb-16">
-            <h2 className="mb-4">Core services</h2>
-            <p className="text-lg text-slate-gray leading-relaxed">
-              Full application delivery  from requirements and architecture
-              through development, integration and cloud deployment.
+          <div className="max-w-2xl mb-12">
+            <h2 className="mb-4 text-black">How we deliver</h2>
+            <p className="text-text-muted">
+              Projects are scoped before work begins. We agree on deliverables,
+              timelines, and pricing before writing any code.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service) => (
-              <div key={service.title} className="card">
-                <div className="card-icon">
-                  <service.icon size={22} />
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              {
+                step: "1",
+                title: "Discovery",
+                desc: "Requirements gathering and technical constraints.",
+              },
+              {
+                step: "2",
+                title: "Design",
+                desc: "Architecture, database schema, and API contracts.",
+              },
+              {
+                step: "3",
+                title: "Build",
+                desc: "Iterative development with weekly demos.",
+              },
+              {
+                step: "4",
+                title: "Deploy",
+                desc: "Testing, cloud deployment, and technical handover.",
+              },
+            ].map((item) => (
+              <div key={item.step}>
+                <div className="text-xl font-bold font-sans text-gold mb-3">
+                  0{item.step}
                 </div>
-                <h4 className="mb-2">{service.title}</h4>
-                <p className="text-slate-gray text-sm leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 text-center">
-            <Link
-              to="/services"
-              className="inline-flex items-center gap-2 text-tech-blue font-semibold hover:gap-3 transition-all"
-            >
-              View all services
-              <ArrowRight size={18} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="section-padding bg-slate-50">
-        <div className="container-custom">
-          <h2 className="mb-12">How we deliver</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((item) => (
-              <div key={item.num}>
-                <div className="text-5xl font-bold text-tech-blue/20 mb-2 font-mono">
-                  {item.num}
-                </div>
-                <h4 className="mb-2">{item.title}</h4>
-                <p className="text-slate-gray text-sm leading-relaxed">
+                <h4 className="mb-2 text-black">{item.title}</h4>
+                <p className="text-sm text-text-muted leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -322,21 +194,17 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-navy text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-deep-navy to-navy" />
-        <div className="absolute top-0 left-1/2 w-96 h-96 bg-tech-blue rounded-full blur-3xl opacity-10 -translate-x-1/2" />
-
-        <div className="relative container-custom text-center">
-          <h2 className="text-white mb-4">
-            Have an application to build, integrate or modernise?
+      <section className="section-padding bg-bg-main text-text-primary border-t border-border-subtle">
+        <div className="container-custom text-center max-w-2xl mx-auto">
+          <h2 className="text-text-primary mb-4">
+            Have a project that needs engineering?
           </h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-            We start with a discovery engagement. Requirements, architecture,
-            integration analysis and a delivery roadmap  before any code is
-            written.
+          <p className="text-text-secondary mb-8">
+            Tell us what you are trying to build. We will tell you if we can
+            help, and how we would approach it.
           </p>
           <Link to="/contact" className="btn-primary">
-            Start with a Discovery
+            Discuss Your Project
             <ArrowRight size={18} />
           </Link>
         </div>

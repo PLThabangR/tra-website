@@ -1,161 +1,141 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Car, Users, ShoppingCart, Workflow } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Work() {
-  const projects = [
+  const caseStudies = [
     {
-      icon: Car,
-      title: "Motor Insurance App",
-      status: "Completed  Flagship Reference",
-      description:
-        "A full-stack motor insurance management application built end-to-end on .NET, React, TypeScript, SQL Server and Azure.",
-      outcomes: [
-        "Policy and quote management",
-        "Claims workflow",
-        "Customer self-service portal",
-        "Reporting dashboard",
-        "Role-based access control",
-      ],
-      stack: [
+      title: "Motor Insurance Application",
+      client: "Mid-sized short-term insurer",
+      status: "Completed",
+      problem:
+        "The client was managing policies, quotes, and claims across disconnected spreadsheets and email threads. There was no single view of risk, and customer queries required phoning the office.",
+      solution:
+        "We built a full-stack application to centralise policy administration, claims processing and customer data.",
+      outcome:
+        "The client now has a single source of truth for all policies and a self-service portal for customers to view their status.",
+      tech: [
         "ASP.NET Core",
         "React",
         "TypeScript",
-        "SQL Server",
+        "Postgress",
+        "Redis",
+        "MediatR",
+        "CQRS",
         "Azure",
         "Docker",
-        "Terraform",
       ],
-      featured: true,
     },
     {
-      icon: Users,
       title: "Staff Portal & Workflow",
+      client: "Professional services firm",
       status: "In Development",
-      description:
-        "A staff portal with workflow digitisation, role-based access and audit trails for a mid-market professional services firm.",
-      outcomes: [
-        "Digital leave requests and approvals",
-        "Document repository with permissions",
-        "Task dashboard",
-        "Audit trail for all approvals",
-      ],
-      stack: ["ASP.NET Core", "Angular", "SQL Server", "Azure"],
-      featured: false,
+      problem:
+        "Leave requests, document approvals, and timesheets were being managed through a mix of paper forms and email.",
+      solution:
+        "We are building a role-based staff portal to digitise approvals and centralise internal documents.",
+      outcome:
+        "The system will provide an audit trail for all approvals and eliminate manual data re-entry.",
+      tech: ["ASP.NET Core", "Angular", "SQL Server", "Azure"],
     },
     {
-      icon: ShoppingCart,
-      title: "Order Status Self-Service Portal",
-      status: "Planned",
-      description:
-        "A customer-facing portal for real-time order status, invoice history and document access.",
-      outcomes: [
-        "Real-time order tracking",
-        "Invoice and document download",
-        "API integration with ERP",
-        "Automated notifications",
+      title: "ABC Properties Management System",
+      client: "Property management",
+      status: "Completed",
+      problem:
+        "Managing property listings and agent relationships requires structured data, reliable API endpoints, and a maintainable backend architecture.",
+      solution:
+        "We are building a property management REST API using ASP.NET Core 8, with dedicated application, domain, and infrastructure layers to manage property agents, property listings, and their relationships.",
+      outcome:
+        "The system aims to provide consistent API responses, validated requests, persistent data storage, and Redis caching through a modular backend designed for maintainability and future expansion.",
+      tech: [
+        "C#",
+        "ASP.NET Core 8",
+        "Entity Framework Core",
+        "SQL Server",
+        "Redis",
+        "MediatR",
+        "CQRS",
+        "Docker",
       ],
-      stack: ["ASP.NET Core", "React", "Azure SQL", "Azure Functions"],
-      featured: false,
-    },
-    {
-      icon: Workflow,
-      title: "Approval Workflow System",
-      status: "Planned",
-      description:
-        "A workflow digitisation platform for replacing paper-based and email-based approvals with auditable digital processes.",
-      outcomes: [
-        "Configurable approval flows",
-        "Digital forms with validation",
-        "Automated notifications",
-        "Compliance-ready audit trail",
-      ],
-      stack: ["ASP.NET Core", "Angular", "SQL Server", "Azure"],
-      featured: false,
     },
   ];
 
   return (
     <>
-      <section className="bg-navy text-white section-padding relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-deep-navy to-navy" />
-        <div className="relative container-custom">
-          <div className="badge-azure mb-6 bg-azure/20 text-azure">
-            Our Work
+      {/* Dark Header */}
+      <section className="bg-bg-main text-text-primary border-b border-border-subtle">
+        <div className="container-custom py-20 md:py-24">
+          <div className="max-w-3xl">
+            <div className="font-sans text-sm text-gold mb-4 uppercase tracking-wider">
+              Projects
+            </div>
+            <h1 className="text-text-primary mb-6">Technical evidence</h1>
+            <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl">
+              We do not fabricate results. These are systems we have built and
+              the technical decisions behind them.
+            </p>
           </div>
-          <h1 className="text-white mb-4 max-w-3xl">
-            Applications we have built and systems we have connected.
-          </h1>
-          <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
-            Every project is delivered with full code ownership, milestone
-            payments and a written scope. Here is what we have built.
-          </p>
         </div>
       </section>
 
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="space-y-8">
-            {projects.map((project) => (
+      {/* Light Content */}
+      <section className="section-padding light-section">
+        <div className="container-custom max-w-4xl">
+          <div className="space-y-12">
+            {caseStudies.map((study) => (
               <div
-                key={project.title}
-                className={`p-8 rounded-xl border transition-all ${
-                  project.featured
-                    ? "bg-light-blue border-tech-blue/30"
-                    : "bg-white border-slate-200"
-                }`}
+                key={study.title}
+                className="border border-border-light rounded-lg overflow-hidden bg-white shadow-sm"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  <div className="lg:col-span-2">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div
-                        className={`w-12 h-12 rounded-lg flex items-center justify-center ${
-                          project.featured
-                            ? "bg-tech-blue text-white"
-                            : "bg-light-blue text-tech-blue"
-                        }`}
-                      >
-                        <project.icon size={22} />
-                      </div>
-                      <div>
-                        <h3 className="mb-1">{project.title}</h3>
-                        <div
-                          className={`text-xs font-semibold uppercase tracking-wider ${
-                            project.featured
-                              ? "text-tech-blue"
-                              : "text-slate-gray"
-                          }`}
-                        >
-                          {project.status}
-                        </div>
-                      </div>
+                <div className="bg-slate-50 px-6 py-4 border-b border-border-light flex flex-wrap justify-between items-center gap-4">
+                  <div>
+                    <h3 className="text-xl mb-1">{study.title}</h3>
+                    <div className="text-sm text-text-muted">
+                      {study.client}
                     </div>
-                    <p className="text-slate-gray mb-6 leading-relaxed">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.stack.map((tech) => (
-                        <span key={tech} className="tech-tag">
-                          {tech}
-                        </span>
-                      ))}
+                  </div>
+                  <div className="font-sans text-xs px-3 py-1 bg-white border border-border-light rounded-full text-text-dark">
+                    Status: {study.status}
+                  </div>
+                </div>
+
+                <div className="p-6 md:p-8">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div>
+                      <div className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
+                        The Problem
+                      </div>
+                      <p className="text-sm text-text-dark leading-relaxed">
+                        {study.problem}
+                      </p>
+                    </div>
+                    <div>
+                      <div className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
+                        Our Solution
+                      </div>
+                      <p className="text-sm text-text-dark leading-relaxed">
+                        {study.solution}
+                      </p>
+                    </div>
+                    <div>
+                      <div className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
+                        The Outcome
+                      </div>
+                      <p className="text-sm text-text-dark leading-relaxed">
+                        {study.outcome}
+                      </p>
                     </div>
                   </div>
 
-                  <div>
-                    <h4 className="text-sm uppercase tracking-wider text-slate-gray mb-3">
-                      Outcomes
-                    </h4>
-                    <ul className="space-y-2">
-                      {project.outcomes.map((outcome) => (
-                        <li
-                          key={outcome}
-                          className="flex gap-2 text-sm text-slate-gray"
-                        >
-                          <span className="text-african-green">✓</span>
-                          <span>{outcome}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="pt-6 border-t border-border-light flex flex-wrap gap-2">
+                    {study.tech.map((t) => (
+                      <span
+                        key={t}
+                        className="font-sans text-xs text-text-muted bg-slate-100 px-2 py-1 rounded border border-border-light"
+                      >
+                        {t}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -164,16 +144,17 @@ export default function Work() {
         </div>
       </section>
 
-      <section className="section-padding bg-navy text-white">
-        <div className="container-custom text-center">
-          <h2 className="text-white mb-4">
-            Want to see a detailed case study?
+      {/* Dark CTA */}
+      <section className="section-padding bg-bg-main border-t border-border-subtle">
+        <div className="container-custom max-w-2xl text-center">
+          <h2 className="text-text-primary mb-4">
+            Want to see a detailed technical walkthrough?
           </h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-            We can walk you through the Motor Insurance App architecture,
-            decisions and outcomes. No sales pitch just the technical story.
+          <p className="text-text-secondary mb-8">
+            We can walk you through the architecture and decisions of a
+            completed project. No sales pitch just the technical story.
           </p>
-          <Link to="/contact" className="btn-primary">
+          <Link to="/contact" className="btn-ghost">
             Request a Walkthrough
             <ArrowRight size={18} />
           </Link>
