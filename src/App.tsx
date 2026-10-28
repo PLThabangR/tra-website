@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
-import Technology from "./pages/Technology";
-import Industries from "./pages/Industries";
+
+
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Work from "./pages/Work";
@@ -17,7 +17,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/approach" element={<Approach />} />
-          <Route path="/industries" element={<Industries />} />
           <Route path="/work" element={<Work />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
