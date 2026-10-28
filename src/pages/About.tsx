@@ -33,7 +33,7 @@ export default function About() {
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
               TR Application Development is a division of TR Software
               Development Consulting (Pty) Ltd. We design, build and integrate
-              practical business applications.
+              practical business applications
             </p>
           </div>
         </div>
@@ -49,18 +49,18 @@ export default function About() {
                 <p>
                   We build the applications that run your business. Staff
                   portals, customer portals, workflow systems, dashboards, APIs
-                  and the integrations that connect them.
+                  and the integrations that connect them
                 </p>
                 <p>
                   Our primary technology ecosystem is Microsoft .NET, Azure, SQL
                   Server and Azure DevOps with modern React and Angular
-                  frontends.
+                  frontends
                 </p>
                 <p>
                   TR Application Development is intentionally not positioned as
                   a managed-services or maintenance provider. Those activities
                   are handled by the parent company under a separate agreement.
-                  This keeps our focus clean: we build, integrate and deploy.
+                  This keeps our focus clean: we build, integrate and deploy
                 </p>
               </div>
             </div>
@@ -140,11 +140,11 @@ export default function About() {
       <section className="section-padding bg-bg-main border-t border-border-subtle">
         <div className="container-custom text-center max-w-2xl mx-auto">
           <h2 className="text-text-primary mb-4">
-            Let's talk about your application.
+            Let's talk about your application
           </h2>
           <p className="text-lg text-text-secondary mb-8 leading-relaxed">
             Whether you need to build, integrate, modernise or deploy we start
-            with understanding.
+            with understanding
           </p>
           <Link to="/contact" className="btn-primary">
             Start a Conversation

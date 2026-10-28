@@ -12,22 +12,22 @@ export default function Home() {
     {
       icon: Code2,
       title: "Custom Business Applications",
-      desc: "Internal tools and platforms built to match specific workflows.",
+      desc: "Internal tools and platforms built to match specific workflows",
     },
     {
       icon: Plug,
       title: "API Integration",
-      desc: "Connecting systems so data flows reliably between them.",
+      desc: "Connecting systems so data flows reliably between them",
     },
     {
       icon: GitBranch,
       title: "Workflow Automation",
-      desc: "Replacing manual processes with auditable digital workflows.",
+      desc: "Replacing manual processes with auditable digital workflows",
     },
     {
       icon: Cloud,
       title: "Cloud Deployment",
-      desc: "Deploying applications into modern cloud environments.",
+      desc: "Deploying applications into modern cloud environments",
     },
   ];
 
@@ -42,12 +42,12 @@ export default function Home() {
                 Software Engineering · Integration · Cloud
               </div>
               <h1 className="text-text-primary mb-6">
-                We build practical software for real business needs.
+                We build practical software for real business needs
               </h1>
               <p className="text-lg md:text-xl text-text-secondary mb-8 leading-relaxed">
                 We design, build and integrate business applications that help
                 teams work more effectivelyfrom internal tools and workflow
-                automation to API integrations and cloud deployed solutions.
+                automation to API integrations and cloud deployed solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact" className="btn-primary">

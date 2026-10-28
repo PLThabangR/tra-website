@@ -74,15 +74,15 @@ export default function Approach() {
             {[
               {
                 title: "Full Code Ownership",
-                desc: "You receive the source code, the database scripts and the infrastructure configuration. No vendor lock-in.",
+                desc: "You receive the source code, the database scripts and the infrastructure configuration. No vendor lock-in",
               },
               {
                 title: "Automated Testing",
-                desc: "We write unit and integration tests for critical business logic to prevent regressions.",
+                desc: "We write unit and integration tests for critical business logic to prevent regressions",
               },
               {
                 title: "Documentation",
-                desc: "We document the architecture, API endpoints, and deployment process so your team can maintain the system.",
+                desc: "We document the architecture, API endpoints, and deployment process so your team can maintain the system",
               },
             ].map((item) => (
               <div key={item.title}>

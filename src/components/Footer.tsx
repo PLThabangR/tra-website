@@ -23,10 +23,10 @@ export default function Footer() {
             <p className="text-text-secondary text-sm max-w-sm mb-6 leading-relaxed">
               We design, build and integrate business applications that help
               teams work more effectively from internal tools and workflow
-              automation to API integrations and cloud deployed solutions.
+              automation to API integrations and cloud deployed solutions
             </p>
             <a
-              href="https://tr-software.co.za"
+              href="https://trsoftwaredev.vercel.app/"
               className="inline-flex items-center gap-1 text-sm text-gold hover:text-gold-hover transition-colors"
             >
               Looking for application support instead? Visit the parent company{" "}
@@ -110,10 +110,7 @@ export default function Footer() {
             © {new Date().getFullYear()} TR Software Development Consulting
             (Pty) Ltd. All rights reserved.
           </p>
-          <p>
-             TR Software Development
-            Consulting (Pty) Ltd.
-          </p>
+          <p>TR Software Development Consulting (Pty) Ltd.</p>
         </div>
       </div>
     </footer>

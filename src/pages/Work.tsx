@@ -8,11 +8,11 @@ export default function Work() {
       client: "Mid-sized short-term insurer",
       status: "Completed",
       problem:
-        "The client was managing policies, quotes, and claims across disconnected spreadsheets and email threads. There was no single view of risk, and customer queries required phoning the office.",
+        "The client was managing policies, quotes, and claims across disconnected spreadsheets and email threads. There was no single view of risk, and customer queries required phoning the office",
       solution:
-        "We built a full-stack application to centralise policy administration, claims processing and customer data.",
+        "We built a full-stack application to centralise policy administration, claims processing and customer data",
       outcome:
-        "The client now has a single source of truth for all policies and a self-service portal for customers to view their status.",
+        "The client now has a single source of truth for all policies and a self-service portal for customers to view their status",
       tech: [
         "ASP.NET Core",
         "React",
@@ -30,11 +30,11 @@ export default function Work() {
       client: "Professional services firm",
       status: "In Development",
       problem:
-        "Leave requests, document approvals, and timesheets were being managed through a mix of paper forms and email.",
+        "Leave requests, document approvals, and timesheets were being managed through a mix of paper forms and email",
       solution:
-        "We are building a role-based staff portal to digitise approvals and centralise internal documents.",
+        "We are building a role-based staff portal to digitise approvals and centralise internal documents",
       outcome:
-        "The system will provide an audit trail for all approvals and eliminate manual data re-entry.",
+        "The system will provide an audit trail for all approvals and eliminate manual data re-entry",
       tech: ["ASP.NET Core", "Angular", "SQL Server", "Azure"],
     },
     {
@@ -42,11 +42,11 @@ export default function Work() {
       client: "Property management",
       status: "Completed",
       problem:
-        "Managing property listings and agent relationships requires structured data, reliable API endpoints, and a maintainable backend architecture.",
+        "Managing property listings and agent relationships requires structured data, reliable API endpoints, and a maintainable backend architecture",
       solution:
-        "We are building a property management REST API using ASP.NET Core 8, with dedicated application, domain, and infrastructure layers to manage property agents, property listings, and their relationships.",
+        "We are building a property management REST API using ASP.NET Core 8, with dedicated application, domain, and infrastructure layers to manage property agents, property listings, and their relationships",
       outcome:
-        "The system aims to provide consistent API responses, validated requests, persistent data storage, and Redis caching through a modular backend designed for maintainability and future expansion.",
+        "The system aims to provide consistent API responses, validated requests, persistent data storage, and Redis caching through a modular backend designed for maintainability and future expansion",
       tech: [
         "C#",
         "ASP.NET Core 8",
@@ -72,7 +72,7 @@ export default function Work() {
             <h1 className="text-text-primary mb-6">Technical evidence</h1>
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl">
               We do not fabricate results. These are systems we have built and
-              the technical decisions behind them.
+              the technical decisions behind them
             </p>
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function Work() {
           </h2>
           <p className="text-text-secondary mb-8">
             We can walk you through the architecture and decisions of a
-            completed project. No sales pitch just the technical story.
+            completed project. No sales pitch just the technical story
           </p>
           <Link to="/contact" className="btn-ghost">
             Request a Walkthrough

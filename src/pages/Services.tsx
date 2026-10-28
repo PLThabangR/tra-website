@@ -5,7 +5,7 @@ export default function Services() {
   const services = [
     {
       title: "Custom Business Applications",
-      desc: "We build internal tools, portals, and line-of-business applications that solve specific operational problems.",
+      desc: "We build internal tools, portals, and line-of-business applications that solve specific operational problems",
       points: [
         "Staff portals and dashboards",
         "Customer self-service platforms",
@@ -15,7 +15,7 @@ export default function Services() {
     },
     {
       title: "API Development & Integration",
-      desc: "We connect systems so data flows reliably between your CRM, ERP, accounting, and custom applications.",
+      desc: "We connect systems so data flows reliably between your CRM, ERP, accounting, and custom applications",
       points: [
         "REST API development",
         "Third-party system integration",
@@ -25,7 +25,7 @@ export default function Services() {
     },
     {
       title: "Workflow Automation",
-      desc: "We replace manual, email-based processes with auditable digital workflows.",
+      desc: "We replace manual, email-based processes with auditable digital workflows",
       points: [
         "Digital forms and validation",
         "Automated routing and notifications",
@@ -35,7 +35,7 @@ export default function Services() {
     },
     {
       title: "Cloud Deployment & Handover",
-      desc: "We deploy applications to modern cloud environments and hand over the keys.",
+      desc: "We deploy applications to modern cloud environments and hand over the keys",
       points: [
         "Microsoft Azure deployment",
         "CI/CD pipeline setup",
@@ -56,7 +56,7 @@ export default function Services() {
             <h1 className="text-text-primary mb-6">What we build</h1>
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl">
               We focus on practical engineering. We do not sell every technology
-              we know; we sell the specific work required to solve your problem.
+              we know; we sell the specific work required to solve your problem
             </p>
           </div>
         </div>
@@ -111,7 +111,7 @@ export default function Services() {
           </h2>
           <p className="text-text-secondary mb-8">
             Tell us what you are trying to build. We will tell you if we can
-            help, and how we would approach it.
+            help, and how we would approach it
           </p>
           <Link to="/contact" className="btn-primary">
             Discuss Your Project

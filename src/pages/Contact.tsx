@@ -199,7 +199,7 @@ export default function Contact() {
                   {!isSubmitting && <Send size={18} />}
                 </button>
                 <p className="text-xs text-text-muted">
-                  We respond within one business day.
+                  We respond within one business day
                 </p>
               </form>
             </div>
