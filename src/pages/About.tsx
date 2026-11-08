@@ -31,9 +31,9 @@ export default function About() {
               A focused application engineering team.
             </h1>
             <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-              TR Application Development is a division of TR Software
-              Development Consulting (Pty) Ltd. We design, build and integrate
-              practical business applications
+              TR Application Development is a division of TR Software Systems
+              Group (Pty) Ltd. We design, build and integrate practical business
+              applications
             </p>
           </div>
         </div>
@@ -58,8 +58,7 @@ export default function About() {
                 </p>
                 <p>
                   TR Application Development is intentionally not positioned as
-                  a managed-services or maintenance provider. Those activities
-                  are handled by the parent company under a separate agreement.
+                  a managed-services or maintenance provider.
                   This keeps our focus clean: we build, integrate and deploy
                 </p>
               </div>

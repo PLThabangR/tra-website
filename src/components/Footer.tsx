@@ -16,7 +16,7 @@ export default function Footer() {
                   TR APPLICATION DEVELOPMENT
                 </div>
                 <div className="font-sans text-xs text-text-secondary">
-                  A division of TR Software Development Consulting (Pty) Ltd
+                  A Division of TR Software Systems Group (Pty) Ltd
                 </div>
               </div>
             </div>
@@ -107,10 +107,10 @@ export default function Footer() {
 
         <div className="border-t border-border-subtle mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-text-secondary">
           <p>
-            © {new Date().getFullYear()} TR Software Development Consulting
-            (Pty) Ltd. All rights reserved.
+            © {new Date().getFullYear()} TR Software Systems Group (Pty) Ltd. All
+            rights reserved.
           </p>
-          <p>TR Software Development Consulting (Pty) Ltd.</p>
+          <p>TR Software Systems Group (Pty) Ltd</p>
         </div>
       </div>
     </footer>

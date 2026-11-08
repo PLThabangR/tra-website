@@ -24,7 +24,7 @@ export default function Header() {
         >
           <img
             src="/trlogo.png"
-            alt="TR Software Development Consulting"
+            alt="TR Software Systems Group (Pty) Ltd"
             className="h-8 w-auto md:hidden"
           />
 
